@@ -66,13 +66,13 @@ start = datetime.datetime.now()
 trigrams = [train(3, datasets[index], trigram) for (index, trigram) in enumerate(trigrams)]
 end = datetime.datetime.now()
 time = end - start
-print("trigrams training done, elapsed time: {} ms".format(time.microseconds))
+print("trigrams training done, elapsed time: {}.{} sec".format(time.seconds, time.microseconds))
 
 start = datetime.datetime.now()
 bigrams = [train(2, datasets[index], bigram) for (index, bigram) in enumerate(bigrams)]
 end = datetime.datetime.now()
 time = end - start
-print("bigrams training done, elapsed time: {} ms".format(time.microseconds))
+print("bigrams training done, elapsed time: {}.{} sec".format(time.seconds, time.microseconds))
 
 #saving models to json
 print("saving models...")
